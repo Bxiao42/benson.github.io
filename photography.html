@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photography Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 200vh; /* 确保有足够滚动空间 */
+        }
+
+        /* 背景视频 */
+        #background-video {
+            position: fixed; /* 改为 fixed 避免滚动空白 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* 主要内容容器 */
+        main {
+            position: relative;
+            z-index: 1; /* 确保内容在视频上层 */
+            padding: 40px 20px;
+        }
+
+        /* 照片组 */
+        .photo-group {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+            margin: 100px auto;
+            max-width: 800px;
+        }
+
+        .photo-group.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .photo-group img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .photo-description {
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<video autoplay muted loop id="background-video">
+    <source src="mainpagebackground.mp4" type="video/mp4">
+</video>
+
+<main>
+    <!-- 照片组1 -->
+    <div class="photo-group" id="group1">
+        <div class="photo-description">DALI CHINA｜2025</div>
+        <img src="your-photo1.jpg">
+        <img src="your-photo2.jpg">
+        <img src="your-photo3.jpg">
+        <img src="your-photo4.jpg">
+    </div>
+
+    <!-- 照片组2 -->
+    <div class="photo-group" id="group2">
+        <div class="photo-description">LIJIANG CHINA｜2025</div>
+        <img src="your-photo5.jpg">
+        <img src="your-photo6.jpg">
+    </div>
+
+    <!-- 照片组3 -->
+    <div class="photo-group" id="group3">
+        <div class="photo-description">JINAN CHINA｜2024</div>
+        <img src="your-photo7.jpg">
+        <img src="your-photo12.jpg">
+    </div>
+
+    <!-- 照片组4 -->
+    <div class="photo-group" id="group3">
+        <div class="photo-description">TORONTO CANADA｜2024</div>
+        <img src="your-photo8.jpg">
+        <img src="your-photo9.jpg">
+    </div>
+
+    <!-- 照片组5 -->
+    <div class="photo-group" id="group3">
+        <div class="photo-description">LONDON CANADA｜2024</div>
+        <img src="your-photo10.jpg">
+        <img src="your-photo13.jpg">
+    </div>
+
+       <!-- 照片组5 -->
+       <div class="photo-group" id="group3">
+        <div class="photo-description">SHENYANG CHINA｜2024</div>
+        <img src="your-photo11.jpg">
+        <img src="your-photo14.jpg">
+    </div>
+<main>
+
+<script>
+    // 优化后的滚动检测逻辑
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2, // 当元素20%进入视口时触发
+        rootMargin: '0px 0px -100px 0px' // 底部提前100px检测
+    });
+
+    // 自动观察所有照片组
+    document.querySelectorAll('.photo-group').forEach(group => {
+        observer.observe(group);
+    });
+
+    // 确保视频自动播放
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.getElementById('background-video');
+        video.play().catch(() => {
+            video.muted = true;
+            video.play();
+        });
+    });
+</script>
+
+</body>
+</html>
+
+

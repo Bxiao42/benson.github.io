@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1d1c1c;
+        }
+        header {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 1em;
+        }
+        main {
+            color: white;
+            padding: 20px;
+        }
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            z-index: -1;
+        }
+        details {
+            margin-bottom: 15px;
+        }
+        summary {
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        p {
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Benson Xiao</h1>
+</header>
+
+<main>
+    <!-- Summary Section -->
+    <details>
+        <summary>SUMMARY</summary>
+        <p>Motivated and detail-oriented Software Engineering student with hands-on experience in frontend web development and application programming.  
+           Eager to contribute to a dynamic front-end development team within the tech industry as an intern.</p>
+    </details>
+
+    <!-- Education Section -->
+    <details>
+        <summary>EDUCATION</summary>
+        <p>Western University, London, ON - Expected in 05/2026 </p>                 
+        <p>Bachelor of Science in Computer Science.</p>
+    </details>
+
+    <!-- Technical Proficiency Section -->
+    <details>
+        <summary>TECHNICAL PROFICIENCY</summary>
+        <p>Programming Languages: Java, C, Python, C++, Assembly. </p>
+        <p>Frontend & Backend Development: HTML5, CSS3, JavaScript, Bootstrap, RESTful APIs, SQL.</p>
+        <p>Software Engineering Tools: Git, GitLab. </p>
+        <p>Cybersecurity & Networking:  Basic knowledge of Firewalls, IDS/IPS, VPNs, and Encryption (SSL/TLS, AES, RSA) and Understanding of Single Sign-On (SSO) (OAuth 2.0, OpenID Connect)</p> 
+    </details>
+
+    <!-- Professional Experience Section -->
+    <details>
+        <summary>PROFESSIONAL EXPERIENCE</summary>
+        <p>Software Engineer(Internship), Siasun Robot & Automation., China                                                 May 2023 -Sep2023 </p>
+        <p>1.Integration and Automation: Designed and implemented a Python-based alerting script to monitor and notify about
+           open customer issues exceeding Service Level Objectives (SLOs). (Python)</p> 
+        <p>2.Collaboration in Agile Teams: Partnered with cross-functional teams, including developers, architects, and business
+           analysts, to deliver integration features and enhancements within an Agile framework.</p>  
+        <p>3.Software Maintenance and Debugging: Contributed to debugging and optimizing Java-based software applications, 
+           improving system performance and reducing technical debt.</p>
+        <p>4.API Development and Security: Gained foundational experience in working with APIs, including RESTful and SOAP
+           services, and implemented secure data handling practices using encryption standards.</p>
+        <p>5.Documentation and Knowledge Sharing: Maintained detailed technical documentation for scripts and software 
+           features, facilitating onboarding and team knowledge sharing.</p> 
+        <p>IT Support Specialist, Eggdemy Inc.,                                                                             May 2024 -August 2024</p> 
+        <p>1.Technical Support: Acted as the first point of contact for resolving technical issues for employees, focusing on macOS
+           platforms and enterprise software. Escalated incidents to internal teams for resolution, ensuring minimal downtime.</p> 
+        <p>2.Website Management and Education: Participated in deploying new solutions and updates for the company's website, 
+           providing user education on benefits and addressing compatibility issues related to releases. (HTML, JavaScript)</p>
+        <p>3.Process Improvement: Identified user access patterns which empowered the marketing team to better target potential
+           customers.</p>
+    </details>
+
+    <!-- Project Experience Section -->
+    <details>
+        <summary>PROJECT EXPERIENCE</summary>
+        <p>Frontend Development for Virtual Pet Game</p>
+        <p>1.Designed and developed a multi-screen GUI interactive virtual pet game using Java for players aged 7+. </p>
+        <p>2.Implemented game mechanics and pet interactions (feeding, playing) with robust event handling in JavaScript and React.</p>
+        <p>3.Conducted unit testing with JUnit5 to ensure the functionality and reliability of the core game components. </p>
+        <p>Frontend Development of Portfolio Website </p>
+        <p>1.Built a responsive personal portfolio website using HTML5, CSS3, and JavaScript to showcase technical projects and 
+           academic achievements. Integrated GitHub API to display real-time data about repositories and contributions. </p>
+        <p>2.Optimized performance with lazy loading for images and minified JavaScript files, ensuring fast loading times across 
+           all devices.</p>
+    </details>
+
+    <!-- Project Experience Section -->
+    <details>
+            <summary>CONTACT DETAILS</summary>
+            <p>Phone Number: 519-991-2070</p>
+            <p>Email: bxiao42@uwo.ca</p>
+    </details>
+</main>
+
+<video autoplay muted loop id="background-video">
+    <source src="mainpagebackground.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+</body>
+</html>
